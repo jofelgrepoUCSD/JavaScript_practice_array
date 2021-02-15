@@ -78,10 +78,57 @@ const femaleCharacters = characters.filter(
 console.log(femaleCharacters)
 
 //***SORT***
+
+// Sort takes in a comparator function (a,b)
+
 //1. Sort by mass
+// Sort mass by increasing order
+const sort_mass_inc = characters.sort( (a,b) => { 
+    return a.mass - b.mass;
+})
+console.log(sort_mass_inc);
+
+// Sort Mass by decreasing order
+const sort_mass_dec = characters.sort( (a,b) => { 
+    return b.mass - a.mass;
+})
+console.log(sort_mass_dec);
+
+
+
 //2. Sort by height
+// Sort height by increasing order
+const sort_height_inc = characters.sort( (a,b) => { 
+    return a.height - b.height;
+})
+console.log(sort_height_inc);
+
+const sort_height_dec = characters.sort((a,b) => {
+    return b.height - a.height;
+})
+console.log(sort_height_dec);
+
 //3. Sort by name
+
+// Sorts alphabetically
+const sort_name = characters.sort( (a,b) => {
+    if (a.name < b.name) return -1;
+    return 1;
+})
+console.log(sort_name)
+
 //4. Sort by gender
+const female_first = characters.sort ((a,b) => {
+    if (a.gender === 'female')return -1;
+    return 1;
+})
+console.log(female_first);
+
+
+
+
+
+
 
 //***EVERY***
 //1. Does every character have blue eyes?
