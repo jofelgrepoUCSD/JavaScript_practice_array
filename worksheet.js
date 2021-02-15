@@ -31,9 +31,49 @@ const characters = [
 
 //***MAP***
 //1. Get array of all names
+const names = characters.map( characters => {
+    return characters.name;    
+})
+console.log(names);
+
+// one liner
+const names2 = characters.map( (characters) => characters.name);
+console.log(names2);
+
 //2. Get array of all heights
+const heights = characters.map( (characters) => characters.height);
+console.log(heights);
+
 //3. Get array of objects with just name and height properties
+
+const name_and_height_2 = characters.map( characters => {
+    return { name: characters.name,
+             height: characters.height,
+            }
+})
+console.log(name_and_height_2);
+
+
+// Implicit (one liner)
+const name_and_height = characters.map(characters => ({
+    name: characters.name, 
+    height: characters.height,
+}));
+console.log(name_and_height)
+
+
 //4. Get array of all first names
+const first_name = characters.map(characters => {
+    return characters.name.split(" ")[0];
+})
+console.log(first_name);
+
+// Implicit (fewer)
+const first_name_fewer = characters.map( (characters) => 
+    characters.name.split(" ")[0] );
+
+console.log(first_name_fewer);
+
 
 //***REDUCE***
 //1. Get total mass of all characters
